@@ -13,22 +13,28 @@ public class Movement : MonoBehaviour
     public float Deadzone;//the Deadzone of the trackpad. used to prevent unwanted walking.#
 
     public SteamVR_Action_Vector2 touchPadAction;
-                        
+
+    private void Start()
+    {
+        GetComponent<Rigidbody>().transform.localRotation = Quaternion.AngleAxis(90, Vector3.up);
+    }
+
     void Update()
     {
         //Set size and position of the capsule collider so it maches our head.
         Collider.height = Head.transform.localPosition.y;
         Collider.center = new Vector3(Head.transform.localPosition.x, Head.transform.localPosition.y / 2, Head.transform.localPosition.z);
 
-        Vector3 newRotation = new Vector3(0, Head.transform.localRotation.y, 0);
-        Debug.Log("euler angels: " + Head.transform.eulerAngles.y);
-        GetComponent<Rigidbody>().transform.eulerAngles = newRotation;
-
+        Debug.Log("head rotation: " + Head.transform.localRotation.y);
+        GetComponent<Rigidbody>().transform.localRotation = Quaternion.AngleAxis(Head.transform.localRotation.eulerAngles.y, Vector3.up);
+        Debug.Log("Rigidbody rotation: " + GetComponent<Rigidbody>().transform.localRotation);
         updateInput();
        if (GetComponent<Rigidbody>().velocity.magnitude < speed && touchpad.magnitude > Deadzone)
         {//make sure the touch isn't in the deadzone and we aren't going to fast.
+          
          // moveDirection = Quaternion.AngleAxis(Angle(touchpad), Vector3.up) * Vector3.forward;//get the angle of the touch and correct it for the rotation of the controller
             moveDirection = new Vector3(touchpad.x, 0, touchpad.y);
+            moveDirection = Quaternion.AngleAxis(-45, Vector3.up) * moveDirection;
             GetComponent<Rigidbody>().AddForce(moveDirection * 30);
        }
     }
