@@ -16,7 +16,8 @@ namespace Valve.VR
     
     public partial class SteamVR_Actions
     {
-        
+        public static object _maze;
+
         public static void PreInitialize()
         {
             SteamVR_Actions.StartPreInitActionSets();

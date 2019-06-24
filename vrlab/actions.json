@@ -72,6 +72,10 @@
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/maze/in/MovementAxis",
+      "type": "vector2"
     }
   ],
   "action_sets": [
@@ -89,6 +93,10 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/maze",
       "usage": "single"
     }
   ],
