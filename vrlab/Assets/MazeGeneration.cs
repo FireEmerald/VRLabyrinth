@@ -35,7 +35,8 @@ public class MazeGeneration : MonoBehaviour
 
                 switch (type) {
                     case 'W':
-                        Instantiate(wall, new Vector3(x, 1, y), Quaternion.identity);
+                        GameObject g = Instantiate(wall, new Vector3(x, 1, y), Quaternion.identity);
+                        g.transform.Rotate(-88.411f, 0f, 0f);
                         break;
                     case 'S':
                         cameraRig.transform.position = new Vector3(x, 0, y);

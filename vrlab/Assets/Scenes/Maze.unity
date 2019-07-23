@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d2006bd82cb4ad183d08732f7aae7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall: {fileID: 8161738091067097113, guid: c14a5662edf54473a824ebcd10327386, type: 3}
+  wall: {fileID: 2570810881840689536, guid: 442e3af2dd87f4df28370601da8b60e9, type: 3}
   cameraRig: {fileID: 560798116}
 --- !u!4 &40743528
 Transform:
