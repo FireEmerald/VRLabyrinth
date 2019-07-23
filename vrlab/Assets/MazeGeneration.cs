@@ -7,6 +7,10 @@ public class MazeGeneration : MonoBehaviour
     public GameObject wall;
     public GameObject cameraRig;
 
+    /* 'W' = Wall
+     * 'S' = Starting position. Needs _ all around it
+     * '_' = Path   
+     */
     private char[,] maze = new char[,]
     {
         {'W','W','W','W','W','W','W','W','W','W','W'},
