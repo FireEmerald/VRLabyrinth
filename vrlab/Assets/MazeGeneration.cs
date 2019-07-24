@@ -37,7 +37,7 @@ public class MazeGeneration : MonoBehaviour
 
                 switch (type) {
                     case 'W':
-                        GameObject g = Instantiate(wall, new Vector3(x, 1, y), Quaternion.identity);
+                        GameObject g = Instantiate(wall, new Vector3(x, 2.05f, y), Quaternion.identity);
                         g.transform.Rotate(-88.411f, 0f, 0f);
                         break;
                     case 'S':
