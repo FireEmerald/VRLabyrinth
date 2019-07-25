@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     public Rigidbody body; 
     public GameObject AxisHand;//Hand Controller GameObject
     public float Deadzone;//the Deadzone of the trackpad. used to prevent unwanted walking.#
+    public AudioSource audio;
 
     public SteamVR_Action_Vector2 touchPadAction;
 
@@ -50,6 +51,14 @@ public class Movement : MonoBehaviour
 
         var movement = body.velocity;
         body.AddForce(movement * -inertia);
+        if (movement.magnitude > 0)
+        {
+            audio.mute = false;
+        }
+        else
+        {
+            audio.mute = true;
+        }
     }
     public static float Angle(Vector2 p_vector2)
     {
