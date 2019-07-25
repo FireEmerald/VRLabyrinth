@@ -60,12 +60,19 @@ public class MazeGeneration : MonoBehaviour
         generateWall();
         int random = UnityEngine.Random.Range(1, maze.GetLength(1)-2);
         maze[0, random] = END;
+        
         AddAdjacentWalls( 0, random);
         do
         {
             PickWall();
         } while (WallList.Count != 0);
         getStartPosition(random);
+    }
+
+  
+    private bool onOuterWall(int x, int y)
+    {
+        return (x == 0 | y == 0 | x == maze.GetLength(0) - 1 | y == maze.GetLength(1) -1);
     }
 
     private void getStartPosition(int start)
@@ -126,39 +133,52 @@ public class MazeGeneration : MonoBehaviour
 
     private bool checkAdjacent(WallItem randomWall)
     {
-        int walls = 0;
+        if (!onOuterWall(randomWall.x, randomWall.y))
+        {
 
-        if (randomWall.x > 0 && maze[randomWall.x - 1, randomWall.y] == WALL)
-        {
-            walls++;
-        }
-        if (randomWall.x < maze.GetLength(0) - 1 && maze[randomWall.x + 1, randomWall.y] == WALL)
-        {
-            walls++;
-        }
-        if (randomWall.y > 0 && maze[randomWall.x, randomWall.y - 1] == WALL)
-        {
-            walls++;
-        }
-        if (randomWall.y < maze.GetLength(1) - 1 && maze[randomWall.x, randomWall.y + 1] == WALL)
-        {
-            walls++;
-        }
-
-        if (walls == 3)
-        {
-            return true;
+            if (maze[randomWall.x - 1, randomWall.y] == WALL &&
+                maze[randomWall.x - 1, randomWall.y - 1] == WALL &&
+                maze[randomWall.x, randomWall.y - 1] == WALL &&
+                maze[randomWall.x + 1, randomWall.y - 1] == WALL &&
+                maze[randomWall.x + 1, randomWall.y] == WALL)
+            {
+                return true;
+            }
+            if (maze[randomWall.x, randomWall.y - 1] == WALL &&
+                maze[randomWall.x + 1, randomWall.y - 1] == WALL &&
+                maze[randomWall.x + 1, randomWall.y] == WALL &&
+                maze[randomWall.x + 1, randomWall.y + 1] == WALL &&
+                maze[randomWall.x, randomWall.y + 1] == WALL)
+            {
+                return true;
+            }
+            if (maze[randomWall.x - 1, randomWall.y] == WALL &&
+                maze[randomWall.x - 1, randomWall.y + 1] == WALL &&
+                maze[randomWall.x, randomWall.y + 1] == WALL &&
+                maze[randomWall.x + 1, randomWall.y + 1] == WALL &&
+                maze[randomWall.x + 1, randomWall.y] == WALL)
+            {
+                return true;
+            }
+            if (maze[randomWall.x, randomWall.y - 1] == WALL &&
+                maze[randomWall.x - 1, randomWall.y - 1] == WALL &&
+                maze[randomWall.x - 1, randomWall.y] == WALL &&
+                maze[randomWall.x - 1, randomWall.y + 1] == WALL &&
+                maze[randomWall.x, randomWall.y + 1] == WALL)
+            {
+                return true;
+            }
         }
         return false;
     }
 
     private void generateWall()
     {
-       for (int i = 0; i < maze.GetLength(1); i++)
+       for (int y = 0; y < maze.GetLength(1); y++)
        {
-            for (int j = 0; j < maze.GetLength(0); j++)
+            for (int x = 0; x < maze.GetLength(0); x++)
             {
-                    maze[j, i] = WALL;
+                    maze[x,y] = WALL;
             }
        }
     }
