@@ -8,6 +8,8 @@ public class MazeGeneration : MonoBehaviour
     public GameObject wall;
     public GameObject cameraRig;
     public int cornDensetiy;
+    public int mazeX;
+    public int mazeY;
 
     private const char WALL = 'W';
     private const char STARTPOS = 'S';
@@ -26,7 +28,7 @@ public class MazeGeneration : MonoBehaviour
     };
 
     private List<WallItem> WallList = new List<WallItem>();
-    private char[,] maze = new char[11, 17];
+    private char[,] maze;
 
     /* 'W' = Wall
      * 'S' = Starting position. Needs _ all around it
@@ -51,6 +53,7 @@ public class MazeGeneration : MonoBehaviour
 
     void Start()
     {
+        maze = new char[mazeX, mazeY];
         randomizeMap();
         generateMap();
     }
