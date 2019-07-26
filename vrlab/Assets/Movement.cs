@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
         GetComponent<Rigidbody>().transform.localRotation = Quaternion.AngleAxis(90, Vector3.up);
     }*/
 
-    void Update()
+    void FixedUpdate()
     {
         //Set size and position of the capsule collider so it maches our head.
         Collider.height = Head.transform.localPosition.y;
