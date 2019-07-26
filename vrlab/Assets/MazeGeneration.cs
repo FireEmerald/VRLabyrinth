@@ -8,6 +8,8 @@ public class MazeGeneration : MonoBehaviour
 {
     public GameObject wall;
     public GameObject cameraRig;
+    public GameObject endText;
+    public GameObject torch;
     public int cornDensetiy;
     public int mazeX;
     public int mazeY;
@@ -210,6 +212,11 @@ public class MazeGeneration : MonoBehaviour
                         break;
                     case STARTPOS:
                         cameraRig.transform.position = new Vector3(x, 0, y);
+                        break;
+                    case END:
+                        endText.transform.position = new Vector3(-2, 0, y);
+                        torch.transform.position = new Vector3(-1.5f, 0, y+0.2f);
+                        
                         break;
                 }
 
