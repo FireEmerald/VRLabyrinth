@@ -32,10 +32,10 @@ The _VR Labyrinth_ is a sample project showing a introduction into virtual reali
 | Unity | 2018.3.14 (26 Apr, 2019) | https://unity3d.com/de/get-unity/download/archive  |
 
 ## 3rd Party Assets
-FPS Counter: http://talesfromtherift.com/vr-fps-counter/
-Torch: https://assetstore.unity.com/packages/3d/props/interior/simple-torch-7275
-Skybox: //TODO
-Corn://TODO
-Sounds: - https://www.freesoundeffects.com/files/download.php
-        - https://www.salamisound.de/save_file/4160954498596387596343289148859647514
-        - //TODO Forest Night von Chris
+FPS Counter: http://talesfromtherift.com/vr-fps-counter/ \n
+Torch: https://assetstore.unity.com/packages/3d/props/interior/simple-torch-7275 \n
+Skybox: https://assetstore.unity.com/packages/2d/textures-materials/milky-way-skybox-94001 \n
+Corn: https://sketchfab.com/3d-models/corn-corn-corn-10187bc37c9e42ef8770b28452ee7cd3 \n
+Sounds: - https://www.freesoundeffects.com/files/download.php \n
+        - https://www.salamisound.de/save_file/4160954498596387596343289148859647514 \n
+        - //TODO Forest Night von Chris \n
