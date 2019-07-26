@@ -7,6 +7,7 @@ public class MazeGeneration : MonoBehaviour
 {
     public GameObject wall;
     public GameObject cameraRig;
+    public GameObject EndText;
     public int cornDensetiy;
     public int mazeX;
     public int mazeY;
@@ -205,6 +206,10 @@ public class MazeGeneration : MonoBehaviour
                         break;
                     case STARTPOS:
                         cameraRig.transform.position = new Vector3(x, 0, y);
+                        break;
+                    case END:
+                        EndText.transform.position = new Vector3(-4, 0, y);
+                        EndText.transform.Rotate(0, 0, 0);
                         break;
                 }
 
