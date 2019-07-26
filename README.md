@@ -36,4 +36,6 @@ FPS Counter: http://talesfromtherift.com/vr-fps-counter/
 Torch: https://assetstore.unity.com/packages/3d/props/interior/simple-torch-7275
 Skybox: //TODO
 Corn://TODO
-Sounds://TODO
+Sounds: - https://www.freesoundeffects.com/files/download.php
+        - https://www.salamisound.de/save_file/4160954498596387596343289148859647514
+        - //TODO Forest Night von Chris
