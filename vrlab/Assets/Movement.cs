@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
         updateInput();
 
         var rotation = Head.transform.localRotation.eulerAngles.y;
-        Debug.Log("Rotation y: " + rotation);
+       
         if (body.velocity.magnitude < speed)
         {//make sure the touch isn't in the deadzone and we aren't going to fast.
           
