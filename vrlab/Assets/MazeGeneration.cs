@@ -205,6 +205,7 @@ public class MazeGeneration : MonoBehaviour
                             GameObject corn = Instantiate(wall, new Vector3(x + UnityEngine.Random.Range(-0.5f, 0.5f), 2.05f, y + UnityEngine.Random.Range(-0.5f, 0.5f)), Quaternion.identity);
                             corn.transform.Rotate(-88.411f, UnityEngine.Random.Range(0f, 360f), 0f);
                             GameObjectUtility.SetStaticEditorFlags(corn, occlusionFlags);
+                            corn.layer = 10;
                         }
                         break;
                     case STARTPOS:
