@@ -9,6 +9,7 @@ public class MazeGeneration : MonoBehaviour
     public GameObject wall;
     public GameObject cameraRig;
     public GameObject endText;
+
     public GameObject torch;
     public int cornDensetiy;
     public int mazeX;
