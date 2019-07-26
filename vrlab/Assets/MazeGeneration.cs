@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MazeGeneration : MonoBehaviour
@@ -188,6 +189,8 @@ public class MazeGeneration : MonoBehaviour
 
     private void generateMap()
     {
+        var occlusionFlags = StaticEditorFlags.OccludeeStatic | StaticEditorFlags.OccluderStatic;
+
         for (int x = 0; x < maze.GetLength(0); x++)
         {
             for (int y = 0; y < maze.GetLength(1); y++)
@@ -201,6 +204,7 @@ public class MazeGeneration : MonoBehaviour
                         {
                             GameObject corn = Instantiate(wall, new Vector3(x + UnityEngine.Random.Range(-0.5f, 0.5f), 2.05f, y + UnityEngine.Random.Range(-0.5f, 0.5f)), Quaternion.identity);
                             corn.transform.Rotate(-88.411f, UnityEngine.Random.Range(0f, 360f), 0f);
+                            GameObjectUtility.SetStaticEditorFlags(corn, occlusionFlags);
                         }
                         break;
                     case STARTPOS:
