@@ -39,7 +39,7 @@ FPS Counter: http://talesfromtherift.com/vr-fps-counter/<br/>
 Torch: https://assetstore.unity.com/packages/3d/props/interior/simple-torch-7275<br/>
 Skybox: https://assetstore.unity.com/packages/2d/textures-materials/milky-way-skybox-94001<br/>
 Corn: https://sketchfab.com/3d-models/corn-corn-corn-10187bc37c9e42ef8770b28452ee7cd3<br/>
-Sign: https://sketchfab.com/3d-models/sign-592ba375a7194290affed512a06c562a<br/>
+Sign: https://www.turbosquid.com/FullPreview/Index.cfm/ID/518171<br/>
 Sounds: - https://www.freesoundeffects.com/files/download.php<br/>
         - https://www.salamisound.de/save_file/4160954498596387596343289148859647514<br/>
         - //TODO Forest Night von Chris
