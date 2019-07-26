@@ -16,10 +16,10 @@ The _VR Labyrinth_ is a sample project showing a introduction into virtual reali
 ## Preview
 
 <TODO: TOP VIEW>
-![preview-top-view](../ScreenShots/lab_top.png)
+![preview-top-view](../vrlab/Assets/ScreenShots/lab_top.png)
 
 <TODO: FIRST PERSON VIEW>
-![preview-first-person](../ScreenShots/lab_fp.png)
+![preview-first-person](../vrlab/Assets/ScreenShots/lab_fp.png)
 
 ## Controls
 
