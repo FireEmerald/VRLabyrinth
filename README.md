@@ -15,7 +15,7 @@ The _VR Labyrinth_ is a sample project showing a introduction into virtual reali
 
 ## Preview
 
-![preview-top-view](../master/img/lab_top.png)
+![preview-top-view](../master/img/lab_view.gif)
 
 ![preview-first-person](../master/img/lab_fp.png)
 
